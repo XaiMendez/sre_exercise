@@ -1,6 +1,6 @@
 
 {
-    "aws_region": "",
+    "aws_region": "us-east-1",
     "instance_type": "",
     "centos_ami":""
 }
