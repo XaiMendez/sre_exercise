@@ -6,7 +6,7 @@ variable "instance_type" {
   type = string
 }
 
-variable "centos_ami" {
+variable "readhat_ami" {
   type = string
 }
 
