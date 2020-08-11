@@ -1,0 +1,7 @@
+$ gcloud auth application-default login
+
+1. Add bucket
+2. Add Account Service and create key
+3. Download credentials file
+
+$ terraform init /or/ terraform init -reconfigure
