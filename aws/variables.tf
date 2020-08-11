@@ -17,3 +17,7 @@ variable "iam_access_key" {
 variable "iam_secret_key" {
   type = string
 }
+
+variable "key_name" {
+  type = string
+}
