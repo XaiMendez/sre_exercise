@@ -1,5 +1,44 @@
+# TERRAFORM
+
 $ terraform init
 
 $ terraform plan -var-file="./tfvars.json"
 
 $ terraform apply -var-file="./tfvars.json"
+
+
+
+# TOMCAT 9
+
+$ dnf update
+$ dnf install java-1.8.0-openjdk-devel
+
+$ cd /usr/local
+
+$ sudo dnf install wget
+
+$ wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.37/bin/apache-tomcat-9.0.37.tar.gz
+$ tar xvf apache-tomcat-9.0.37.tar.gz
+$ mv apache-tomcat-9.0.37 tomcat9
+
+$ useradd -r tomcat
+$ chown -R tomcat:tomcat /usr/local/tomcat9
+
+$ sudo dnf install nano
+$ nano /etc/systemd/system/tomcat.service
+
+systemctl daemon-reload
+systemctl start tomcat.service
+systemctl enable tomcat.service
+systemctl status tomcat.service
+
+$ netstat -tlpn
+
+$ sudo yum install firewalld
+$ systemctl enable firewalld
+$ systemctl start firewalld
+$ systemctl status firewalld
+
+
+$ firewall-cmd --zone=public --permanent --add-port=8080/tcp
+$ firewall-cmd --zone=public --permanent --add-port=8443/tcp
