@@ -4,12 +4,13 @@ provider "google-beta" {
     region  = var.region
     version = "~> 3.10"
     alias   = "gb3"
+    credentials = ""
 }
 
 # GKE cluster
-resource "google_container_cluster" "my_k8s_cluster" {
+resource "google_container_cluster" "sre-cluster" {
     provider           = google-beta.gb3
-    name               = "my-k8s-cluster"
+    name               = "sre-cluster"
     location           = var.region
     initial_node_count = 1
 
@@ -38,8 +39,8 @@ resource "google_container_cluster" "my_k8s_cluster" {
             node_metadata = "GKE_METADATA_SERVER"
         }
 
-        labels = { # Update: Replace with desired labels
-            "environment" = "test"
+        labels = {
+            "environment" = "development"
             "team"        = "devops"
         }
     }

@@ -5,3 +5,7 @@ $ gcloud auth application-default login
 3. Download credentials file
 
 $ terraform init /or/ terraform init -reconfigure
+
+$ terraform plan --out 1.plan
+
+$ terraform apply 1.plan
