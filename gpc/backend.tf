@@ -1,6 +1,7 @@
 terraform {
     backend "gcs" {
-    bucket = "my-tfstate-bucket" 
-    prefix = "gke-cluster" 
+        bucket = "xmendez-bucket" 
+        prefix = "gke-cluster"
+        credentials = ""
     }
 }
