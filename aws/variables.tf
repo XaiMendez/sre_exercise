@@ -9,3 +9,11 @@ variable "instance_type" {
 variable "centos_ami" {
   type = string
 }
+
+variable "iam_access_key" {
+  type = string
+}
+
+variable "iam_secret_key" {
+  type = string
+}

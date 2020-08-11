@@ -2,5 +2,7 @@
 {
     "aws_region": "us-east-1",
     "instance_type": "",
-    "centos_ami":""
+    "centos_ami":"",
+    "iam_access_key":"",
+    "iam_secret_key":""
 }
